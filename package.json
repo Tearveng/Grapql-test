@@ -1,0 +1,33 @@
+{
+  "name": "graphql-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "add": "^2.0.6",
+    "apollo-server-express": "^3.3.0",
+    "class-validator": "^0.13.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "graphql": "^15.6.1",
+    "graphql-tag": "^2.12.5",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.2.1",
+    "typeorm": "^0.2.38",
+    "typescript": "^4.4.3",
+    "yarn": "^1.22.15"
+  },
+  "scripts": {
+    "gen-env": "npx gen-env-types .env -o src/env.d.ts -e . ",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "nodemon --exec ts-node src/index.ts",
+    "create:migration": "mikro-orm migration:create"
+  },
+  "devDependencies": {
+    "@types/express-session": "^1.17.4",
+    "nodemon": "^2.0.13",
+    "type-graphql": "^1.1.1"
+  }
+}
